@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Dandy Raka Official Website">
     <meta name="author" content="Dandy Raka">
-    <title>Coming Soon</title>
+    <title>Graphic Trends - Twitter Trending Indonesia</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -16,12 +16,12 @@
     <script src="assets/js/ie-emulation-modes-warning.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<link rel="stylesheet" href="assets/css/chart.css">
   </head>
   
   <body>
@@ -35,32 +35,35 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Coming Soon</a>
+            <a class="navbar-brand" href="#">Twitter Trending Indonesia</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="all-trends.html">All Trend</a></li>
+			  <li class="active"><a href="graphic-trends.html">Graphical Trend</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li class="active"><a href="project.html">Project</a></li>
             </ul>
           </div>
         </div>
       </div>
       
       <div class="jumbotron">
-        <div id="my-github-projects"/></div>
+        <center>
+		<img src="http://www.pngall.com/wp-content/uploads/2016/07/Twitter-PNG-HD-1-180x180.png"><br>
+		<font size="20"><b>Twitter Trending Indonesia</b></font>
+		</center>
+		<br>
+		<hr>
+		<br>
+		<div id="data"></div>
       </div>
 
     </div>
-      <center>Copyright &copy; 2018</center>
+      <center>Copyright &copy; 2018 Twitter Trending Indonesia</center>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
-      <script src="assets/js/project.js" type="text/javascript"></script>
-      <script type="text/javascript">
-        $(function() {
-            $("#my-github-projects").loadRepositories("dandyraka");
-        });
-      </script>
+	  <script type="text/javascript" src="getjsonchart.js"></script>
+	  <script src="assets/js/chart.js"></script>
   </body>
 </html>
