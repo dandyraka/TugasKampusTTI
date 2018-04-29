@@ -22,6 +22,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<link rel="stylesheet" href="assets/css/chart.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var url = $("#cartoonVideo").attr('src');
+			$("#myModal").on('hide.bs.modal', function(){
+				$("#cartoonVideo").attr('src', '');
+			});
+			$("#myModal").on('show.bs.modal', function(){
+				$("#cartoonVideo").attr('src', url);
+			});
+		});
+	</script>
+	<style type="text/css">
+		.modal-content video{
+			margin: 0 auto;
+			display: block;
+		}
+		.modal-content img{
+			margin: 0 auto;
+			display: block;
+		}
+	</style>
   </head>
   
   <body>
@@ -49,6 +70,82 @@
       </div>
       
       <div class="jumbotron">
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">JSON Data</h4>
+					</div>
+					<div class="modal-body">
+						<pre>
+[
+	{
+		"name": "Avengers",
+		"url": "http://twitter.com/search?q=Avengers",
+		"is_promoted": null,
+		"tweet": 9869
+	},
+	{
+		"name": "Thanos",
+		"url": "http://twitter.com/search?q=Thanos",
+		"is_promoted": null,
+		"tweet": 8964
+	},
+	{
+		"name": "#SHANIEPS51",
+		"url": "http://twitter.com/search?q=%23SHANIEPS51",
+		"is_promoted": null,
+		"tweet": 2451
+	},
+	{
+		"name": "Skuad Garuda",
+		"url": "http://twitter.com/search?q=%22Skuad+Garuda%22",
+		"is_promoted": null,
+		"tweet": 2804
+	},
+	{
+		"name": "#PrestasiPentingJujurYangUtama",
+		"url": "http://twitter.com/search?q=%23PrestasiPentingJujurYangUtama",
+		"is_promoted": null,
+		"tweet": 1410
+	},
+	{
+		"name": "#RoadToFestivalTelukJailolo",
+		"url": "http://twitter.com/search?q=%23RoadToFestivalTelukJailolo",
+		"is_promoted": null,
+		"tweet": 6875
+	},
+	{
+		"name": "Korea Utara",
+		"url": "http://twitter.com/search?q=%22Korea+Utara%22",
+		"is_promoted": null,
+		"tweet": 2867
+	},
+	{
+		"name": "#TimnasDay",
+		"url": "http://twitter.com/search?q=%23TimnasDay",
+		"is_promoted": null,
+		"tweet": 8517
+	},
+	{
+		"name": "Budi Waseso",
+		"url": "http://twitter.com/search?q=%22Budi+Waseso%22",
+		"is_promoted": null,
+		"tweet": 4201
+	},
+	{
+		"name": "Radioshow",
+		"url": "http://twitter.com/search?q=Radioshow",
+		"is_promoted": null,
+		"tweet": 597
+	}
+]
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
         <center>
 		<img src="http://www.pngall.com/wp-content/uploads/2016/07/Twitter-PNG-HD-1-180x180.png"><br>
 		<font size="20"><b>Twitter Trending Indonesia</b></font>
@@ -57,6 +154,7 @@
 		<hr>
 		<br>
 		<div id="data"></div>
+		<center><a href="#myModal" data-toggle="modal" id="get-data"><button type="button" class="btn btn-info">Show JSON</button></a></center>
       </div>
 
     </div>
